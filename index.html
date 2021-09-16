@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact-form-register</title>
     <link rel="stylesheet" href="index.css">
-    <script src="index.js"></script>
 </head>
 <body style="background-color: aquamarine;">
     <div class="nav">
@@ -28,7 +27,34 @@
                        placeholder="Enter your comment here"></textarea><br><br>
              <input type="submit" name="contact" value="Submit" onclick="validate();">
          </form>
-            <script></script>
+            <script>
+            
+                 function validate() {
+                    var name=document.forms['myform']['name'].value;
+                    var email=document.forms['myform']['email'].value;
+                    var select=document.forms['myform']['issue'].value;
+                    var comment=document.forms['myform']['comment'].value;
+                    if (name=="") {
+                        alert("Enter the name");
+                        document.forms['myform']['name'].focus();
+                    }
+                    else if(email==""){
+                        alert("Enter the email");
+                        document.forms['myform']['email'].focus();
+                    }
+                    else if (select=="") {
+                        alert("Enter this field");
+                        document.forms['myform']['issue'].focus();
+                    }
+                    else if (comment=="") {
+                        alert("Enter this field");
+                        document.forms['myform']['comment'].focus();
+                    }
+                    else{
+                        alert("submit");
+                    }
+                }
+            </script>
         </div>
     </center>
 </body>
