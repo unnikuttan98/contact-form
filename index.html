@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact-form-register</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+</head>
+<body style="background-color: aquamarine;">
+    <div class="nav">
+       <center><h1>Contact-Form</h1></center>
+    </div>
+    <center>
+        <div class="card">
+         <form action="index.php" method="post" name='myform'>
+             <label>Enter the name</label><input type="text" name="name" id="form-name" placeholder="Enter Your name"><br><br>
+             <label>Enter the email</label><input type="email" name="email" id="form-email" placeholder="Enter Email-ID"><br><br>
+             <label>Select issue</label><select name="issue" id="select">
+                 <option value="">Select-issue</option>
+                 <option value="Query">Query</option>
+                 <option value="Feedback">Feedback</option>
+                 <option value="Complaint">Complaint</option>
+                 <option value="Other">Other</option>
+             </select><br><br>
+             <textarea name="comment" id="textarea" cols="90" rows="10"
+                       placeholder="Enter your comment here"></textarea><br><br>
+             <input type="submit" name="contact" value="Submit" onclick="validate();">
+         </form>
+        </div>
+    </center>
+</body>
+</html>
